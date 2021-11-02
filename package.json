@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "buildDev": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +14,8 @@
   "devDependencies": {
     "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.3"
   }
 }

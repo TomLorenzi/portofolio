@@ -10,11 +10,12 @@ body {
 }
 
 .page {
-  height: 100vh;
+  margin-bottom: 50px;
 }
 
 #title,
-h2 {
+h2,
+h3 {
   text-align: center;
 }
 
@@ -45,8 +46,10 @@ h2 {
   text-align: center;
   width: 100%;
   a {
+    margin: 0.5em;
     color: transparent;
   }
+
   i {
     color: #fff;
     transition: all 0.2s ease-in-out;
@@ -54,6 +57,7 @@ h2 {
     border: 1px solid white;
     padding: 0.3em;
   }
+
   i:hover {
     color: #6f33fa;
     transform: scale(1.3);
@@ -61,11 +65,91 @@ h2 {
   }
 }
 
+
+.cardContainer {
+    width: 100%;
+    text-align: center;
+
+    .card {
+        display: inline-block;
+        vertical-align: top;
+        width: 250px;
+        height: 350px;
+        background-color: #4a35dc;
+        border-radius: 50px;
+        margin: 15px;
+        box-shadow: 0 0 .2rem rgb(192, 192, 192),
+              0 0 .2rem rgb(192, 192, 192),
+              0 0 2rem #420cc2,
+              0 0 0.8rem #420cc2,
+              0 0 2.8rem #420cc2,
+              inset 0 0 1.3rem #420cc2;
+        transition: all .2s ease-in-out;
+
+        .cardTitle {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            margin: 15px;
+            max-width: 50%;
+            max-height: 25%;
+        }
+    }
+
+    .card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 .2rem #fff,
+                    0 0 .2rem #fff,
+                    0 0 2rem #520bf7,
+    }
+}
+
+.circle {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #000;
+
+    position: relative;
+    overflow: hidden;
+    border: 5px solid#1a1a1a;
+
+    i {
+        margin-top: 30%;
+    }
+}
+
+.circle:after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+
+    background: rgba(77, 57, 250, 0.5);
+    box-shadow: 0 0 20px #4a03bc;
+
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .timeline {
   position: relative;
   width: 660px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 1em 0;
   list-style-type: none;
 }
